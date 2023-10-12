@@ -1,0 +1,93 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="emp_log.master.vb" Inherits="Metalife.emp_log" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+ <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <div>
+
+    <nav class="navbar navbar-default navbar-static-top">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">
+				mETALife
+			</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">			
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../User/index.aspx" target="_blank">Visit Site</a></li>
+				<li class="dropdown ">
+					<a href="../Employee/signin.aspx" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+						Logout
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	
+        
+    </div>
+  <div class="sidenav">
+  <a href="../Employee/pat_reg.aspx">Patient Register</a>
+  <a href="../Employee/pat_discharge.aspx">Patient Discharge</a>
+  <a href="../Employee/pat_appoint.aspx">Fix Appointment</a>
+  <a href="../Employee/check_doctors.aspx">Check Doctors</a>
+  <a href="../Employee/view_app.aspx">View Appointments</a>
+  </div>
+
+    <div class="main">
+    <asp:contentplaceholder runat="server" ID="c1">
+    
+    </asp:contentplaceholder>
+    </div>  
+</body>
+</html>
+<style>
+.sidenav {
+  height: 100%;
+  width: 230px;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 230px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/*-----------------------------------------------------------------------*>
+</style>
